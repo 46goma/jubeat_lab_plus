@@ -1,5 +1,5 @@
 JubeatLabPlus::App.controllers :mylist do
-  
+
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'
   #   render 'index'
@@ -18,9 +18,20 @@ JubeatLabPlus::App.controllers :mylist do
   # get '/example' do
   #   'Hello world!'
   # end
-  
-  get :index do
 
+  get :index do
+    render 'mylist/index'
   end
 
+  get :fumen_new, :map => '/mylist/fumen/new' do
+    render 'mylist/fumen/new'
+  end
+
+  post :fumen_new do
+    render 'mylist/fumen/confirm'
+  end
+
+  post :fumen_save, :map => '/mylist/fumen/save' do
+    redirect url(:mylist, :index)
+  end
 end
