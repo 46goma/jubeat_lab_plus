@@ -9,4 +9,4 @@ db/*.db
 .*.sw*
 .bundle
 vendor
-
+config/database.rb
