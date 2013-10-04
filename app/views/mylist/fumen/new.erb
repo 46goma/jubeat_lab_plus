@@ -1,1 +1,20 @@
-mylist fumen new
+<form method="post" action="" accept-charset="UTF-8">
+    <label for="mylist_fumen_fumen_id">Fumen: </label>
+    <input id="mylist_fumen_fumen_id" name="mylist_fumen[fumen_id]" type="text" /><br />
+    <label for="mylist_fumen_title">Title: </label>
+    <input id="mylist_fumen_title" name="mylist_fumen[title]" type="text" /><br />
+    <label for="mylist_fumen_comment">Comment: </label>
+    <textarea id="mylist_fumen_comment" name="mylist_fumen[comment]" rows="" cols=""></textarea><br />
+    <input value="Submit" type="submit" />
+</form>
+<!--
+    <% form_for @mylist_fumen, '' do |f| %>
+        <%= f.label :fumen_id%>
+        <%= f.text_field :fumen_id %><br />
+        <%= f.label :title %>
+        <%= f.text_field :title %><br />
+        <%= f.label :comment %>
+        <%= f.text_area :comment %><br />
+        <%= f.submit %>
+    <% end %>
+-->

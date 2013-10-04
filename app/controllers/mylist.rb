@@ -1,3 +1,5 @@
+require 'mylist_fumen'
+
 JubeatLabPlus::App.controllers :mylist do
 
   # get :index, :map => '/foo/bar' do
@@ -24,10 +26,12 @@ JubeatLabPlus::App.controllers :mylist do
   end
 
   get :fumen_new, :map => '/mylist/fumen/new' do
+    @mylist_fumen = MylistFumen.new
     render 'mylist/fumen/new'
   end
 
   post :fumen_new do
+    @mylist_fumen = MylistFumen.new(params[:mylist_fumen])
     render 'mylist/fumen/confirm'
   end
 
